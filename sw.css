@@ -11,14 +11,14 @@ body {
     background: #000;
     overflow: hidden;
     position: relative;
-    margin: 50% 0 0 0;
+    margin: 0;
 
     color: #ffc909;
 
 
 }
 
-h1{
+h1 {
     font: 6em "Times New Roman", serif;
     margin: 0.2em;
 }
@@ -30,10 +30,14 @@ h1{
     font-size: smaller;
     text-align: center;
     width: 100%;
+    padding: 0.5em;
 }
 
-button{
-    border-color: ;
+button {
+    border-color: #ffc909;
+    background-color: #000;
+    color: white;
+    padding: 0.3em;
 }
 
 
@@ -81,6 +85,6 @@ body::after {
     background-color: transparent;
 }
 
-img{
+img {
     width: 100%;
 }
