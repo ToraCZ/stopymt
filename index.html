@@ -8,118 +8,108 @@
   <title>Po stopách Michala Telína</title>
   <link rel="stylesheet" href="./sw.css">
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <script>
+    var id = "text";
+    function switchButton(newId) {
+      document.getElementById(id + "_btn").classList.remove("active");
+      document.getElementById(id).classList.add("hidden");
+      id = newId
+      document.getElementById(id + "_btn").classList.add("active");
+      document.getElementById(id).classList.remove("hidden");
+    }
+  </script>
 </head>
 
 <body>
   <div class="controls">
     <h1>II</h1>
-    <button class="big active"> Text </button>
-    <button class="big"> Foto </button>
+    <button id="text_btn" onclick="switchButton('text')" class="big active"> Text </button>
+    <button id="foto_btn" onclick="switchButton('foto')" class="big"> Foto </button>
     <br>
-    <button> Nápověda </button>
-    <button> Souřadnice </button>
-    <button> Řešení </button>
+    <button id="hint_btn" onclick="switchButton('hint')"> Nápověda </button>
+    <button id="gps_btn" onclick="switchButton('gps')"> Souřadnice </button>
+    <button id="solution_btn" onclick="switchButton('solution')"> Řešení </button>
   </div>
   <div class="wrapper">
-    <div id="text">
+    <div id="text" class="content sw">
+
       <p>
-        It is a period of civil war.
-        Rebel spaceships, striking
-        from a hidden base, have won
-        their first victory against
-        the evil Galactic Empire.
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus faucibus molestie nisl. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in
+        lacus. Aliquam id dolor. Nam sed tellus id magna elementum tincidunt. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Etiam neque. Etiam
+        egestas wisi a erat. Integer tempor. Aenean fermentum risus id tortor. Nullam rhoncus aliquam metus. Aenean id metus id velit ullamcorper pulvinar. Nunc tincidunt ante vitae massa.
+      </p>
+      <p>
+        Mauris dictum facilisis augue. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est,
+        omnis dolor repellendus. Nulla est. Etiam egestas wisi a erat. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Morbi leo mi, nonummy eget tristique non, rhoncus
+        non leo. Curabitur sagittis hendrerit ante. Aliquam erat volutpat. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. Mauris suscipit, ligula sit amet pharetra semper, nibh ante
+        cursus purus, vel sagittis velit mauris vel metus. Fusce wisi. Fusce consectetuer risus a nunc. Aenean fermentum risus id tortor.
+      </p>
+      <p>
+        Aenean fermentum risus id tortor. Proin in tellus sit amet nibh dignissim sagittis. Nulla non arcu lacinia neque faucibus fringilla. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Mauris dictum facilisis augue. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna.
+        Curabitur sagittis hendrerit ante. Nullam sit amet magna in magna gravida vehicula. In enim a arcu imperdiet malesuada. Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero,
+        eget facilisis enim ipsum id lacus.
+      </p>
+      <p>
+        Cras elementum. Pellentesque ipsum. Nulla pulvinar eleifend sem. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Cras elementum. Sed ac dolor sit amet purus malesuada
+        congue. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Nullam dapibus fermentum ipsum. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Nullam at arcu a
+        est sollicitudin euismod. Nullam eget nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nunc dapibus tortor vel mi dapibus sollicitudin.
+      </p>
+      <p>
+        In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Pellentesque pretium lectus id turpis. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Ut enim ad minima
+        veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Curabitur sagittis hendrerit ante. Nullam faucibus mi quis velit. Donec ipsum
+        massa, ullamcorper in, auctor et, scelerisque sed, est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas fermentum, sem in pharetra
+        pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Aliquam ante. Suspendisse nisl. Praesent vitae
+        arcu tempor neque lacinia pretium. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est,
+        omnis dolor repellendus. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Suspendisse sagittis ultrices augue. Proin pede metus, vulputate
+        nec, fermentum fringilla, vehicula vitae, justo. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam.
       </p>
 
       <p>
-        During the battle, Rebel
-        spies managed to steal secret
-        plans to the Empire's
-        ultimate weapon, the DEATH
-        STAR, an armored space
-        station with enough power to
-        destroy an entire planet.
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus faucibus molestie nisl. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in
+        lacus. Aliquam id dolor. Nam sed tellus id magna elementum tincidunt. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Etiam neque. Etiam
+        egestas wisi a erat. Integer tempor. Aenean fermentum risus id tortor. Nullam rhoncus aliquam metus. Aenean id metus id velit ullamcorper pulvinar. Nunc tincidunt ante vitae massa.
       </p>
-
       <p>
-        Pursued by the Empire's
-        sinister agents, Princess
-        Leia races home aboard her
-        starship, custodian of the
-        stolen plan that can save
-        her people and restore
-        freedom to the galaxy....
+        Mauris dictum facilisis augue. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est,
+        omnis dolor repellendus. Nulla est. Etiam egestas wisi a erat. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Morbi leo mi, nonummy eget tristique non, rhoncus
+        non leo. Curabitur sagittis hendrerit ante. Aliquam erat volutpat. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. Mauris suscipit, ligula sit amet pharetra semper, nibh ante
+        cursus purus, vel sagittis velit mauris vel metus. Fusce wisi. Fusce consectetuer risus a nunc. Aenean fermentum risus id tortor.
       </p>
-
       <p>
-        It is a period of civil war.
-        Rebel spaceships, striking
-        from a hidden base, have won
-        their first victory against
-        the evil Galactic Empire.
+        Aenean fermentum risus id tortor. Proin in tellus sit amet nibh dignissim sagittis. Nulla non arcu lacinia neque faucibus fringilla. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Mauris dictum facilisis augue. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna.
+        Curabitur sagittis hendrerit ante. Nullam sit amet magna in magna gravida vehicula. In enim a arcu imperdiet malesuada. Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero,
+        eget facilisis enim ipsum id lacus.
       </p>
-
       <p>
-        During the battle, Rebel
-        spies managed to steal secret
-        plans to the Empire's
-        ultimate weapon, the DEATH
-        STAR, an armored space
-        station with enough power to
-        destroy an entire planet.
+        Cras elementum. Pellentesque ipsum. Nulla pulvinar eleifend sem. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Cras elementum. Sed ac dolor sit amet purus malesuada
+        congue. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Nullam dapibus fermentum ipsum. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Nullam at arcu a
+        est sollicitudin euismod. Nullam eget nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nunc dapibus tortor vel mi dapibus sollicitudin.
       </p>
-
       <p>
-        Pursued by the Empire's
-        sinister agents, Princess
-        Leia races home aboard her
-        starship, custodian of the
-        stolen plan that can save
-        her people and restore
-        freedom to the galaxy....
+        In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Pellentesque pretium lectus id turpis. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Ut enim ad minima
+        veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Curabitur sagittis hendrerit ante. Nullam faucibus mi quis velit. Donec ipsum
+        massa, ullamcorper in, auctor et, scelerisque sed, est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas fermentum, sem in pharetra
+        pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Aliquam ante. Suspendisse nisl. Praesent vitae
+        arcu tempor neque lacinia pretium. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est,
+        omnis dolor repellendus. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Suspendisse sagittis ultrices augue. Proin pede metus, vulputate
+        nec, fermentum fringilla, vehicula vitae, justo. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam.
       </p>
 
-      <p>
-        Pursued by the Empire's
-        sinister agents, Princess
-        Leia races home aboard her
-        starship, custodian of the
-        stolen plan that can save
-        her people and restore
-        freedom to the galaxy....
-      </p>
 
-      <p>
-        It is a period of civil war.
-        Rebel spaceships, striking
-        from a hidden base, have won
-        their first victory against
-        the evil Galactic Empire.
-      </p>
-
-      <p>
-        During the battle, Rebel
-        spies managed to steal secret
-        plans to the Empire's
-        ultimate weapon, the DEATH
-        STAR, an armored space
-        station with enough power to
-        destroy an entire planet.
-      </p>
-
-      <p>
-        Pursued by the Empire's
-        sinister agents, Princess
-        Leia races home aboard her
-        starship, custodian of the
-        stolen plan that can save
-        her people and restore
-        freedom to the galaxy.... TEST
-      </p>
-
-      <img src="./background.jpg" />
     </div>
-    <div id="hint">
-
+    <div id="foto" class="content hidden">
+      <img src="./mitch.jpg" />
+    </div>
+    <div id="hint" class="content sw hidden">
+      Jdi doleva.
+    </div>
+    <div id="gps" class="content hidden">
+      <a href="https://goo.gl/maps/xZA5MEzsHwgZrvjn9" target="_blank">49.72916069763232 <br> <br> 13.402310816522633</a>
+    </div>
+    <div id="solution" class="content sw hidden">
+      Pět kroků od třetího dubu nalevo za sedmero horami.
     </div>
   </div>
 

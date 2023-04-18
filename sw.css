@@ -18,6 +18,10 @@ body {
 
 }
 
+a {
+    color: #ffc909;
+}
+
 h1 {
     font: 6em "Times New Roman", serif;
     margin: 0.2em;
@@ -25,20 +29,33 @@ h1 {
 
 .controls {
     position: absolute;
-    top: 1em;
+    top: 0;
     z-index: 100;
     font-size: smaller;
     text-align: center;
     width: 100%;
-    padding: 0.5em;
 }
 
 button {
     border-color: #ffc909;
     background-color: #000;
-    color: white;
-    padding: 0.3em;
+    color: #ffc909;
+    padding: 0.5em;
+    border-radius: 10%;
+    margin: 1em;
+    font-size: 1em;
 }
+
+button.big {
+    font-size: 1.5em;
+}
+
+button.active {
+    background-color: #ffc909;
+    color: #000
+}
+
+
 
 
 body::after {
@@ -61,30 +78,44 @@ body::after {
     perspective: 80vw;
 }
 
-#text {
+.content {
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
-    /*padding: 100vh 0;*/
     padding-top: 50vh;
+    text-align: center;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
     font-size: 6vw;
     line-height: 1.5em;
-    font-weight: bold;
-    text-align: justify;
-    position: relative;
-    /* animation: scroll 60s linear forwards; */
-    transform: translateZ(-200px) rotateX(35deg);
-    overflow: auto;
 }
 
-#text::-webkit-scrollbar {
+.content::-webkit-scrollbar {
     width: 6px;
     background-color: transparent;
 }
 
-#text::-webkit-scrollbar-thumb {
+.content::-webkit-scrollbar-thumb {
     background-color: transparent;
 }
 
+.content.hidden {
+    display: none;
+}
+
+.sw {
+    transform: translateZ(-200px) rotateX(35deg);
+}
+
+#text {
+    text-align: justify;
+}
+
+
 img {
     width: 100%;
+}
+
+#gps{
+    font: 4em "Roboto", monospace;
 }
