@@ -37,17 +37,18 @@ h1 {
 }
 
 button {
+    text-transform: uppercase;
     border-color: #ffc909;
     background-color: #000;
     color: #ffc909;
     padding: 0.5em;
     border-radius: 10%;
     margin: 1em;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 button.big {
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 button.active {
@@ -75,7 +76,7 @@ body::after {
     margin: 0 auto;
     /* perspective gives us a 3d space within the element to work with*/
     /* perspective also has the effect of pushing the content "down" */
-    perspective: 80vw;
+    perspective: 75vw;
 }
 
 .content {
@@ -109,6 +110,13 @@ body::after {
 
 #text {
     text-align: justify;
+    padding-top: 70vh;
+}
+
+#foto{
+    max-height: 60vh;
+    padding-top: 50vh;
+   /*  overflow: hidden; */
 }
 
 
