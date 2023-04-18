@@ -116,6 +116,11 @@ img {
     width: 100%;
 }
 
-#gps{
-    font: 4em "Roboto", monospace;
+#gps>a{
+    width: 3em;
+    display: block;
+    margin: auto;
+}
+#gps>a>img{
+    width: 100%;
 }
