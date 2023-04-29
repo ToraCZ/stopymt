@@ -9,6 +9,7 @@ g6bnlpAuAsLeB6Go | U Chovky     | ponožka      | https://goo.gl/maps/tLF9kGCab4
 rUfB0cyfodxMP7e0 | Depo2015     | lístek/fire  | https://goo.gl/maps/SBnRgbcoQohe8fVQ7 ||
 TJVJENY80XrdqneH | U Tory       | hasičák      | https://goo.gl/maps/yuavHrG2XqV9dUmv5 ||
 oj7ocHAxK08XxSAj | Iconics?     | ?            | https://goo.gl/maps/1hzCxRf3E38D2qa7A ||
+lvEXSBLw7bWMftba | VR future    | VR brejle    | https://goo.gl/maps/xKHu18gAAfQ68e4D9 || 25. narozeniny
 5S7w0cwe26LtDLhN | Raven        | dva kyseláče | https://goo.gl/maps/CRvrjudo3r4wm3vL7 ||
 No7VCYQLkydcqo2x | Jameson      | whiskey/sud  | https://goo.gl/maps/xGXTX7fcbEtuaftJ9 ||
 GG3UAHeOLNlGnS8k | Park Sm.sady | Kůň          | https://goo.gl/maps/xCQ6KmkxaUSwD8YB6 || Němé kino - sv. václav
