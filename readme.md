@@ -3,7 +3,7 @@ kód              | místo        | předmět      | mapa                       
 u9p3feFKG5O7fhIz | Doma         |              | https://goo.gl/maps/AtPScojmY5NkPdQZ6 ||
 n8VxMoYIxXiQO5XZ | SPŠE         | frisco       | https://goo.gl/maps/c4hDHpWrwXES2YRf8 | Hádanka? |
 7xVieStCJ8wGL791 | Saint Tropez | pouta        | https://goo.gl/maps/FAkiUrmNQi7n4Xy68 | Četník |
-Vjt2oXcGiGtUi150 | Karčy exbyt  | ?            | https://goo.gl/maps/4RFCf4KUbotTS1xG6 | |
+Vjt2oXcGiGtUi150 | Karči exbyt  | ?            | https://goo.gl/maps/4RFCf4KUbotTS1xG6 | |
 g6bnlpAuAsLeB6Go | U Chovky     | ponožka      | https://goo.gl/maps/tLF9kGCab4KqvMKc6 | Fotka gauče z yogamatu |
 5pzQ8a8qWypJLief | U řeky       | kečup        | https://goo.gl/maps/LuRWwe38jkGVWAcT9 | Fotka s kečupem |
 rUfB0cyfodxMP7e0 | Depo2015     | lístek/fire  | https://goo.gl/maps/SBnRgbcoQohe8fVQ7 | autobus s logem rfp / 2015 |
