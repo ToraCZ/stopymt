@@ -9,6 +9,12 @@
   <link rel="stylesheet" href="./sw.css">
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
   <script>
+
+    fetch("https://maker.ifttt.com/trigger/stopymt/json/with/key/Llgpn-giSYVkj3wHI9fdR?value1=Doma", {
+      type: "POST",
+      body: JSON.stringify({ location: "doma" }),
+
+    })
     let scrollPosition = 0;
     let scrollInterval;
     var id = "text";
@@ -52,12 +58,6 @@
       }, 500);
     }
 
-    function preventScroll(e) {
-      e.preventDefault();
-      e.stopPropagation();
-
-      return false;
-    }
 
     resetScroll();
   </script>
@@ -66,9 +66,9 @@
 <body>
   <div class="controls">
     <h1>I</h1>
-    <button onmousedown="manualScrollStart(-1)" ontouchstart="manualScrollStart(-1)" onmouseup="manualScrollStop()" ontouchend="manualScrollStop()">&Lt;</button>
+    <!--     <button onmousedown="manualScrollStart(-1)" ontouchstart="manualScrollStart(-1)" onmouseup="manualScrollStop()" ontouchend="manualScrollStop()">&Lt;</button> -->
     <button id="text_btn" onclick="switchButton('text')" class="active"> Text </button>
-    <button onmousedown="manualScrollStart(1)" ontouchstart="manualScrollStart(1)" onmouseup="manualScrollStop()" ontouchend="manualScrollStop()">&Gt;</button>
+    <!--     <button onmousedown="manualScrollStart(1)" ontouchstart="manualScrollStart(1)" onmouseup="manualScrollStop()" ontouchend="manualScrollStop()">&Gt;</button> -->
     <br>
     <button id="hint_btn" onclick="switchButton('hint')"> Nápověda </button>
     <button id="gps_btn" onclick="switchButton('gps')"> Souřadnice </button>
@@ -86,10 +86,10 @@
       Mitchi, jsi naše jediná naděje. <br><br><br><br>
     </div>
     <div id="hint" class="static hidden">
-      <img src="./hint/43xQyPekUtIXD0vn.png" />
+      <img src="./hint/u9p3feFKG5O7fhIz.png" />
     </div>
     <div id="gps" class="static hidden">
-      <a href="https://goo.gl/maps/xZA5MEzsHwgZrvjn9" target="_blank"><img src="./map.png"></a>
+      <a href="https://goo.gl/maps/u9p3feFKG5O7fhIz" target="_blank"><img src="./map.png"></a>
     </div>
   </div>
 
