@@ -12,8 +12,14 @@ body {
     position: relative;
     margin: 0;
     color: #ffc909;
-
 }
+
+#logo{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 
 a {
     color: #ffc909;
