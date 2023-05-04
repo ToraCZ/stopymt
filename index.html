@@ -6,84 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Po stopách Michala Telína</title>
-  <link rel="stylesheet" href="./sw.css">
+  <link rel="stylesheet" href="./style.css">
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <script src="./script.js"></script>
   <script>
 
-    fetch("https://maker.ifttt.com/trigger/stopymt/json/with/key/Llgpn-giSYVkj3wHI9fdR", {
-      method: "POST",
-      body: { location: "doma" },
-
-    })
-    let scrollPosition = 0;
-    let scrollInterval;
-    var id = "text";
-
-    function resetScroll(step = 1) {
-      scrollInterval = setInterval(() => {
-        scrollText(step);
-      }, 20);
-    }
-
-    function switchButton(newId) {
-      if (id === "text") {
-        resetScroll();
-      } else {
-        clearInterval(scrollInterval);
-      }
-      document.getElementById(id + "_btn").classList.remove("active");
-      document.getElementById(id).classList.add("hidden");
-      id = newId
-      document.getElementById(id + "_btn").classList.add("active");
-      document.getElementById(id).classList.remove("hidden");
-    }
-
-    function scrollText(step) {
-      document.getElementById("text").scroll(0, scrollPosition);
-      scrollPosition = scrollPosition + step;
-      if (document.getElementById("text").scrollHeight < scrollPosition) {
-        clearInterval(scrollInterval);
-      }
-    }
-
-    function manualScrollStart(step) {
-      clearInterval(scrollInterval);
-      resetScroll(step);
-    }
-
-    function manualScrollStop() {
-      clearInterval(scrollInterval);
-      setTimeout(() => {
-        resetScroll();
-      }, 500);
-    }
-
-
-    resetScroll();
   </script>
 </head>
 
 <body>
   <div class="controls">
     <h1>I</h1>
-    <!--     <button onmousedown="manualScrollStart(-1)" ontouchstart="manualScrollStart(-1)" onmouseup="manualScrollStop()" ontouchend="manualScrollStop()">&Lt;</button> -->
     <button id="text_btn" onclick="switchButton('text')" class="active"> Text </button>
-    <!--     <button onmousedown="manualScrollStart(1)" ontouchstart="manualScrollStart(1)" onmouseup="manualScrollStop()" ontouchend="manualScrollStop()">&Gt;</button> -->
-    <br>
     <button id="hint_btn" onclick="switchButton('hint')"> Nápověda </button>
     <button id="gps_btn" onclick="switchButton('gps')"> Souřadnice </button>
   </div>
-  <div class="wrapper">
-    <div id="text" class="sw">
-      Před dávnými časy, v předaleké galaxii… <br> <br> Jsi oslavil 30 let. Tedy jsme oslavili, abych byl přesný. Víš, já jsem tebou. Ano, mluvím k tobě ze vzdálené budoucnosti. Tobě před nedávnem
+  <div class="wrapper" ontouchstart="pauseScroll()" ontouchend="resetScroll()">
+    <div id="text">
+      <h2>Před dávnými časy, v předaleké galaxii… </h2><br> Jsi oslavil 30 let. Tedy jsme oslavili, abych byl přesný. Víš, já jsem tebou. Ano, mluvím k tobě ze vzdálené budoucnosti. Tobě před nedávnem
       bylo 30 let a já oslavil 142. <br> <br> Dnešní den však kriticky ovlivní to, jakým způsobem bude náš život pokračovat dál. <br> Je nutné, abys až do poslední chvíle následoval mé instrukce..
       <br><br> Při svých mezigalaktických velvyslaneckých cestách jsem narazil na červí díru, která mě unesla do víru času. To způsobilo řadu časových anomálií, které se zhmotňují jako předměty spjaté
       s naším životem, a to právě dnes, 7.5.2023. <br> <br> Od tebe potřebuji abys šel po stopě těchto anomálií a pomohl mi uniknout jejich zajištěním. Časové kontinuum mi bohužel dovolí nahlédnout do
       minulosti jen ve velmi omezeném režimu. Vidím jen fragmenty události, související s danou anomálií. Budeš si muset v řadě situací umět poradit a vzpomínat na naši společnou minulost. <br> <br> U
       každého předmětu, který najdeš, nalezneš QR kód, jehož načtením budu schopný anomálii identifikovat, zajistit a poslat ti nápovědu k dalšímu předmětu. Musíš najít a vyřešit všechny nápovědy,
       jinak je naše existence, rodina i kariéra, odsouzena k zániku. <br> <br> Pokud už opravdu bude hrozit že další časovou anomálii nenajdeš, je u každé z nich k dispozici poslední známá
-      časoprostorová souřadnice. Ale kde je v tom pak zábava? Neboj se ale kromě popisu používat i obrázkové nápovědy které ti pomocí časového vortexu budu posílat. <br> <br> Prosím pomoz mi, mladý
-      Mitchi, jsi naše jediná naděje. <br><br><br><br>
+      časoprostorová souřadnice. Ale kde je v tom pak zábava? Neboj se ale kromě popisu používat i obrázkové nápovědy které ti pomocí časového vortexu budu posílat. <br> <h2> Prosím pomoz mi, mladý
+      Mitchi, jsi naše jediná naděje. </h2>
     </div>
     <div id="hint" class="static hidden">
       <img src="./hint/u9p3feFKG5O7fhIz.png" />

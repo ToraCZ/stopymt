@@ -1,45 +1,133 @@
-@keyframes bg {
-    from {
-        background-position-y: 0%;
-    }
+@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
 
-    to {
-        background-position-y: 100%;
-    }
-}
 
-* {
-    text-align: center;
-}
-
+html,
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
-            rgba(0, 0, 0, 0.7)), url("./background.jpg");
-    background-repeat: repeat;
-    padding: 4vw 8vh;
-    /* animation-name: bg;*/
-    animation-duration: 80s;
-    animation-iteration-count: infinite;
-    font-family: monospace;
-
-}
-
-#main {
-    text-align: justify;
-    background-color: rgba(75, 125, 145, 0.8);
-    color: white;
-    padding: 1vw 2vh;
-    border: 2vh double black;
+    width: 100%;
+    height: 100%;
+    font: 700 1em "News Cycle", sans-serif;
+    letter-spacing: .15em;
+    background: #000;
     overflow: hidden;
-    transition: height 1.5s cubic-bezier(0.25, 0.65, 0.7, 1.6);
-    height: 2vh;
+    position: relative;
+    margin: 0;
+    color: #ffc909;
+
 }
 
-#text{
+a {
+    color: #ffc909;
+}
+
+h1 {
+    font: 3em "Times New Roman", serif;
+    margin: 0.2em;
+}
+
+.controls {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    font-size: smaller;
+    text-align: center;
+    width: 100%;
+}
+
+button {
+    text-transform: uppercase;
+    border-color: #ffc909;
+    background-color: #000;
+    color: #ffc909;
+    padding: 0.5em;
+    border-radius: 10%;
+    margin: 1em;
+    transition: all 0.3s ease-in-out;
+}
+
+button.active {
+    background-color: #ffc909;
+    color: #000
+}
+
+button:active {
+    background-color: #ffc909;
+    color: #000
+}
+
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(20, 20, 20, 1) 20%, rgba(20, 20, 20, 0) 50%,  rgba(20, 20, 20, 0) 80%, rgba(20, 20, 20, 1) 100%);
+}
+
+.wrapper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    perspective: 95vw;
+}
+
+#text {
+    touch-action: none;
+    text-align: center;
+    padding-top: 100vh;
+    position: relative;
+    top: 00vh;
+    line-height: 2.5em;
+    font-size: 1.2em;
+    animation: scroll 5s linear forwards;
+    transform: translateZ(-40vw) rotateX(25deg);
     overflow: auto;
-    height: 95%;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    user-select: none;
 }
 
-p{
-    text-align: justify;
+#text::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 40vh;
+}
+
+#text::-webkit-scrollbar {
+    width: 0px;
+    background-color: transparent;
+}
+
+#text-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.static {
+    max-height: 60vh;
+    width: 90vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+#gps>a {
+    height: 100%;
+    width: 8em;
+    margin: auto;
+    display: block;
+    z-index: 10;
+}
+
+img {
+    width: 100%;
 }
