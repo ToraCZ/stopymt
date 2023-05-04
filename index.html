@@ -9,13 +9,48 @@
   <link rel="stylesheet" href="./sw.css">
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
   <script>
+    let scrollPosition = 0;
+    let scrollInterval = setInterval(() => {
+      scrollText(1);
+    }, 10);
     var id = "text";
     function switchButton(newId) {
+      if (id === "text") {
+        scrollInterval = setInterval(() => {
+          scrollText(1);
+        }, 10);
+      } else {
+        clearInterval(scrollInterval);
+      }
       document.getElementById(id + "_btn").classList.remove("active");
       document.getElementById(id).classList.add("hidden");
       id = newId
       document.getElementById(id + "_btn").classList.add("active");
       document.getElementById(id).classList.remove("hidden");
+    }
+
+    function scrollText(step) {
+      document.getElementById("text").scroll(0, scrollPosition);
+      scrollPosition = scrollPosition + step;
+      if (document.getElementById("text").scrollHeight < scrollPosition) {
+        clearInterval(scrollInterval);
+      }
+    }
+
+    function manualScrollStart(step) {
+      clearInterval(scrollInterval);
+      scrollInterval = setInterval(() => {
+        scrollText(step);
+      }, 10);
+    }
+
+    function manualScrollStop() {
+      clearInterval(scrollInterval);
+      setTimeout(() => {
+        scrollInterval = setInterval(() => {
+          scrollText(1);
+        }, 10);
+      }, 500);
     }
   </script>
 </head>
@@ -23,7 +58,10 @@
 <body>
   <div class="controls">
     <h1>I</h1>
+    <!--     <button onmousedown="manualScrollStart(-1)" onmouseup="manualScrollStop()">&Lt;</button> -->
     <button id="text_btn" onclick="switchButton('text')" class="active"> Text </button>
+    <!--     <button onmousedown="manualScrollStart(1)" onmouseup="manualScrollStop()">&Gt;</button>
+    <br> -->
     <button id="hint_btn" onclick="switchButton('hint')"> Nápověda </button>
     <button id="gps_btn" onclick="switchButton('gps')"> Souřadnice </button>
   </div>
@@ -37,7 +75,7 @@
       každého předmětu, který najdeš, nalezneš QR kód, jehož načtením budu schopný anomálii identifikovat, zajistit a poslat ti nápovědu k dalšímu předmětu. Musíš najít a vyřešit všechny nápovědy,
       jinak je naše existence, rodina i kariéra, odsouzena k zániku. <br> <br> Pokud už opravdu bude hrozit že další časovou anomálii nenajdeš, je u každé z nich k dispozici poslední známá
       časoprostorová souřadnice. Ale kde je v tom pak zábava? Neboj se ale kromě popisu používat i obrázkové nápovědy které ti pomocí časového vortexu budu posílat. <br> <br> Prosím pomoz mi, mladý
-      Mitchi, jsi naše jediná naděje.
+      Mitchi, jsi naše jediná naděje. <br><br><br><br>
     </div>
     <div id="hint" class="static hidden">
       <img src="./hint/43xQyPekUtIXD0vn.png" />

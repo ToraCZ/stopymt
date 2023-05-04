@@ -21,7 +21,7 @@ a {
 }
 
 h1 {
-    font: 6em "Times New Roman", serif;
+    font: 4em "Times New Roman", serif;
     margin: 0.2em;
 }
 
@@ -51,6 +51,11 @@ button.active {
     color: #000
 }
 
+button:active {
+    background-color: #ffc909;
+    color: #000
+}
+
 
 body::after {
     content: '';
@@ -66,30 +71,29 @@ body::after {
     height: 100%;
     width: 60%;
     margin: 0 auto;
-    perspective: 300px;
+    perspective: 75vw;
 }
-
-
-@keyframes scroll {
-    from {
-        top: 0;
-        transform: translateZ(0) rotateX(20deg);
-    }
-
-    to {
-        top: -7500px;
-        transform: translateZ(-2500px) rotateX(21deg);
-    }
-}
-
 
 #text {
     text-align: justify;
     padding-top: 70vh;
     position: relative;
-    font-size: 6vw;
+    font-size: 4em;
     line-height: 1.5em;
-    animation: scroll 100s linear forwards;
+    animation: scroll 5s linear forwards;
+    transform: translateZ(-200px) rotateX(35deg);
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+#text::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+}
+
+#text-webkit-scrollbar-thumb {
+    background-color: transparent;
 }
 
 
