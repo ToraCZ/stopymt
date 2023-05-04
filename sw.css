@@ -74,6 +74,7 @@ body::after {
 }
 
 #text {
+    touch-action: none;
     text-align: center;
     padding-top: 90vh;
     position: relative;
