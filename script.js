@@ -1,6 +1,6 @@
 
 function log(location) {
-    fetch("https://maker.ifttt.com/trigger/stopymt/with/key/Llgpn-giSYVkj3wHI9fdR?value1=" + location, {
+    location && fetch("https://maker.ifttt.com/trigger/stopymt/with/key/Llgpn-giSYVkj3wHI9fdR?value1=" + location, {
         mode: "no-cors",
     })
 }

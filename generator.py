@@ -47,6 +47,9 @@ for line in data:
     html = html.replace("{text}", text)
     html = html.replace("{index}", roman_numerals[index])
 
+    if id == "uoU3leDkv8uNsAg6":
+        html = html.replace("</body>",'<audio controls id="song" loop><source src="./pisen.mp3" type="audio/mpeg"></audio></body>')
+
     # Create the directory if it doesn't exist
     if not os.path.exists(id):
         os.makedir(id)

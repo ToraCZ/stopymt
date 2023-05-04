@@ -19,10 +19,6 @@
     <button id="gps_btn" onclick="switchButton('gps')"> Souřadnice </button>
     <br>
     <button id="pause_btn" onclick="toggleScroll()" class="active"> ► </button>
-
-
-
-
     <br>
 
   </div>
@@ -45,7 +41,13 @@
       <a href="https://goo.gl/maps/AtPScojmY5NkPdQZ6" target="_blank"><img src="./map.png"></a>
     </div>
   </div>
-  <script src="./script.js">log("test")</script>
+  <audio controls id="song" loop>
+    <source src="./pisen.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="./script.js">
+    log();
+  </script>
 </body>
 
 </html>

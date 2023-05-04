@@ -141,3 +141,11 @@ body::after {
 img {
     width: 100%;
 }
+
+audio{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    z-index: 150;
+    width: 90%;
+}
