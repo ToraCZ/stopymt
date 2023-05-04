@@ -5,6 +5,8 @@ function log(location) {
     })
 }
 
+let textDiv = document.getElementById("text");
+let pauseBtn = document.getElementById("pause_btn");
 let scrollPosition = 0;
 let scrollInterval;
 let id = "text";
@@ -12,6 +14,7 @@ let id = "text";
 function resetScroll(step = 1) {
     if (scrollInterval) {
         clearInterval(scrollInterval);
+        scrollInterval = undefined;
     }
     setTimeout(() => {
         scrollInterval = setInterval(() => {
@@ -23,9 +26,12 @@ function resetScroll(step = 1) {
 
 function switchButton(newId) {
     if (newId === "text") {
+        pauseBtn.classList.remove("hidden");
         resetScroll();
     } else {
+        pauseBtn.classList.add("hidden");
         clearInterval(scrollInterval);
+        scrollInterval = undefined;
     }
     document.getElementById(id + "_btn").classList.remove("active");
     document.getElementById(id).classList.add("hidden");
@@ -35,15 +41,23 @@ function switchButton(newId) {
 }
 
 function scrollText(step) {
-    document.getElementById("text").scroll(0, scrollPosition);
+    textDiv.scroll(0, scrollPosition);
     scrollPosition = scrollPosition + step;
-    if (document.getElementById("text").scrollHeight < scrollPosition) {
+    if (textDiv.scrollHeight < scrollPosition) {
         clearInterval(scrollInterval);
+        scrollInterval = undefined;
     }
 }
 
-function pauseScroll(){
-    clearInterval(scrollInterval);
+function toggleScroll() {
+    if (scrollInterval) {
+        pauseBtn.classList.remove("active");
+        clearInterval(scrollInterval);
+        scrollInterval = undefined;
+    } else {
+        pauseBtn.classList.add("active");
+        resetScroll();
+    }
 }
 
 resetScroll();

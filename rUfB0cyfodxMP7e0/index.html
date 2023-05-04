@@ -17,9 +17,11 @@
 <body>
   <div class="controls">
     <h1>VII</h1>
+    <button id="hint_btn" onclick="switchButton('hint')"> Nápověda </button>
     <button id="text_btn" onclick="switchButton('text')" class="active"> Text </button>
-    <button id="hint_btn" onclick="switchButton('hint')"> Nápověda </button>
     <button id="gps_btn" onclick="switchButton('gps')"> Souřadnice </button>
+    <br>
+    <button id="pause_btn" onclick="toggleScroll()" class="active"> ► </button>
   </div>
   <div class="wrapper" ontouchstart="pauseScroll()" ontouchend="resetScroll()">
     <div id="text">
