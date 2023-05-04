@@ -5,8 +5,6 @@ function log(location) {
     })
 }
 
-let textDiv = document.getElementById("text");
-let pauseBtn = document.getElementById("pause_btn");
 let scrollPosition = 0;
 let scrollInterval;
 let id = "text";
@@ -26,10 +24,10 @@ function resetScroll(step = 1) {
 
 function switchButton(newId) {
     if (newId === "text") {
-        pauseBtn.classList.remove("hidden");
+        document.getElementById("pause_btn").classList.remove("hidden");
         resetScroll();
     } else {
-        pauseBtn.classList.add("hidden");
+        document.getElementById("pause_btn").classList.add("hidden");
         clearInterval(scrollInterval);
         scrollInterval = undefined;
     }
@@ -41,9 +39,9 @@ function switchButton(newId) {
 }
 
 function scrollText(step) {
-    textDiv.scroll(0, scrollPosition);
+    document.getElementById("text").scroll(0, scrollPosition);
     scrollPosition = scrollPosition + step;
-    if (textDiv.scrollHeight < scrollPosition) {
+    if (document.getElementById("text").scrollHeight < scrollPosition) {
         clearInterval(scrollInterval);
         scrollInterval = undefined;
     }
@@ -51,11 +49,11 @@ function scrollText(step) {
 
 function toggleScroll() {
     if (scrollInterval) {
-        pauseBtn.classList.remove("active");
+        document.getElementById("pause_btn").classList.remove("active");
         clearInterval(scrollInterval);
         scrollInterval = undefined;
     } else {
-        pauseBtn.classList.add("active");
+        document.getElementById("pause_btn").classList.add("active");
         resetScroll();
     }
 }
