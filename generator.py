@@ -9,6 +9,7 @@ with open("./template.html", "r", encoding="utf-8") as template_file:
     template = template_file.read()
 # font for QR
 font = ImageFont.truetype("arial.ttf", 30)
+index = 1
 for line in data:
     [id, place, item, map, text] = [x.strip() for x in line.split("|")]
     # QR
@@ -42,6 +43,7 @@ for line in data:
     html = html.replace("{place}", place)
     html = html.replace("{map}", map)
     html = html.replace("{text}", text)
+    html = html.replace("{index}", str(index))
 
     # Create the directory if it doesn't exist
     if not os.path.exists(id):
@@ -51,3 +53,4 @@ for line in data:
     with open("./" + id + "/index.html", "w", encoding="utf-8") as output_file:
         output_file.write(html)
     # ---
+    index = index + 1
