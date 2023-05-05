@@ -8,7 +8,7 @@ data = open("./data.txt", "r", encoding="utf-8")
 with open("./template.html", "r", encoding="utf-8") as template_file:
     template = template_file.read()
 # font for QR
-font = ImageFont.truetype("arial.ttf", 30)
+font = ImageFont.truetype("arial.ttf", 18)
 index = 0
 roman_numerals = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII"]
 
@@ -18,8 +18,8 @@ for line in data:
     qr = qrcode.QRCode(
         version=1,
         error_correction=qrcode.constants.ERROR_CORRECT_L,
-        box_size=10,
-        border=8,
+        box_size=7,
+        border=5,
     )
     qr.add_data("http://stopymt.xyz/" + id + "/")
     qr.make(fit=True)
@@ -29,9 +29,9 @@ for line in data:
     img = Image.open("./qr/" + id + ".png")
     imgDraw = ImageDraw.Draw(img)
     _, _, w, h = imgDraw.textbbox((0, 0), id, font=font)
-    imgDraw.text(((450 - w) / 2, 20), id, font=font)
-    imgDraw.text(((450 - w) / 2, 430 - h), id, font=font)
-    imgDraw.rectangle([0, 0, 449, 449], fill=None, width=8)
+    imgDraw.text(((273 - w) / 2, h/2), id, font=font)
+    imgDraw.text(((273 - w) / 2, 273 - h*1.5), id, font=font)
+    imgDraw.rectangle([0, 0, 272, 272], fill=None, width=8)
     img.save("./qr/" + id + ".png")
     # ---
 

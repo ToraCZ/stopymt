@@ -25,9 +25,11 @@ function resetScroll(step = 1) {
 function switchButton(newId) {
     if (newId === "text") {
         document.getElementById("pause_btn").classList.remove("hidden");
+        document.getElementById("reset_btn").classList.remove("hidden");
         resetScroll();
     } else {
         document.getElementById("pause_btn").classList.add("hidden");
+        document.getElementById("reset_btn").classList.add("hidden");
         clearInterval(scrollInterval);
         scrollInterval = undefined;
     }
@@ -49,13 +51,19 @@ function scrollText(step) {
 
 function toggleScroll() {
     if (scrollInterval) {
-        document.getElementById("pause_btn").classList.remove("active");
+        document.getElementById("pause_btn").classList.add("active");
         clearInterval(scrollInterval);
         scrollInterval = undefined;
     } else {
-        document.getElementById("pause_btn").classList.add("active");
+        document.getElementById("pause_btn").classList.remove("active");
         resetScroll();
     }
+}
+
+function scrollToTop() {
+    document.getElementById("text").scrollTo(0, 0);
+    scrollPosition = 0;
+    resetScroll();
 }
 
 resetScroll();

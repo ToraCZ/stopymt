@@ -21,11 +21,12 @@
     <button id="text_btn" onclick="switchButton('text')" class="active"> Text </button>
     <button id="gps_btn" onclick="switchButton('gps')"> Souřadnice </button>
     <br>
-    <button id="pause_btn" onclick="toggleScroll()" class="active"> ► </button>
+    <button id="reset_btn" onclick="scrollToTop()" > Reset </button>
+    <button id="pause_btn" onclick="toggleScroll()" > Pauza </button>
   </div>
   <div class="wrapper" ontouchstart="pauseScroll()" ontouchend="resetScroll()">
     <div id="text">
-      Další lokace je opět opředena spoustou otázek! Například.: <br> Která česká osobnost ve středu dopoledne představila svůj oficiální portrét? <br> Interpret a název písně  (po půl bodu)? <br> Za který tým NHL hrál v letech 1977-1982 čechoslovák Václav Nedomanský? <br> Co označuje latinský výraz gloriola? <br> Jak se jmenuje stanice metra v Praze, která se dříve jmenovala Moskevská.? <br> Který podnik spojují všechny předchozí odpovědi? (za bonusovou anomálii navíc).
+      Další lokace je opět opředena spoustou otázek! Například.: <ol> <li> Která česká osobnost ve středu dopoledne představila svůj oficiální portrét? <li></li> Interpret a název písně  (po půl bodu)? <li></li> Za který tým NHL hrál v letech 1977-1982 čechoslovák Václav Nedomanský? <li></li> Co označuje latinský výraz gloriola? <li></li> Jak se nyní jmenuje stanice metra v Praze, která se dříve jmenovala Moskevská? <li></li> Který podnik spojují všechny předchozí odpovědi? (za bonusovou anomálii navíc). <li></ol>
     </div>
     <div id="hint" class="static hidden">
       <img src="/hint/uoU3leDkv8uNsAg6.png" />
