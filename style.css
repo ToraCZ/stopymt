@@ -16,6 +16,7 @@ body {
 
 #logo {
     padding-top: 10vh;
+    max-height: 20vh;
 }
 
 #intro{
