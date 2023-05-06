@@ -10,10 +10,51 @@ with open("./template.html", "r", encoding="utf-8") as template_file:
 # font for QR
 font = ImageFont.truetype("arial.ttf", 18)
 index = 0
-roman_numerals = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII"]
+roman_numerals = [
+    "I",
+    "II",
+    "III",
+    "IV",
+    "V",
+    "VI",
+    "VII",
+    "VIII",
+    "IX",
+    "X",
+    "XI",
+    "XII",
+    "XIII",
+    "XIV",
+    "XV",
+    "XVI",
+    "XVII",
+    "XVIII",
+]
+
+# readme.md
+readme = open("./readme.md", "w", encoding="utf-8")
+readme.write("kód | místo | předmět | mapa | text \n")
+readme.write("--- | --- | --- | --- | --- \n")
 
 for line in data:
     [id, place, item, map, text] = [x.strip() for x in line.split("|")]
+    # README
+    readme.write(
+        "["
+        + id
+        + "](https://stopymt.xyz/"
+        + id
+        + ") | "
+        + place
+        + " | "
+        + item
+        + " | [mapa]("
+        + map
+        + ") | <details><summary>Text</summary>"
+        + text
+        + "</details>\n"
+    )
+    # ---
     # QR
     qr = qrcode.QRCode(
         version=1,
@@ -29,8 +70,8 @@ for line in data:
     img = Image.open("./qr/" + id + ".png")
     imgDraw = ImageDraw.Draw(img)
     _, _, w, h = imgDraw.textbbox((0, 0), id, font=font)
-    imgDraw.text(((273 - w) / 2, h/2), id, font=font)
-    imgDraw.text(((273 - w) / 2, 273 - h*1.5), id, font=font)
+    imgDraw.text(((273 - w) / 2, h / 2), id, font=font)
+    imgDraw.text(((273 - w) / 2, 273 - h * 1.5), id, font=font)
     imgDraw.rectangle([0, 0, 272, 272], fill=None, width=8)
     img.save("./qr/" + id + ".png")
     # ---
@@ -48,7 +89,10 @@ for line in data:
     html = html.replace("{index}", roman_numerals[index])
 
     if id == "uoU3leDkv8uNsAg6":
-        html = html.replace("</body>",'<audio controls id="song" loop><source src="/pisen.mp3" type="audio/mpeg"></audio></body>')
+        html = html.replace(
+            "</body>",
+            '<audio controls id="song" loop><source src="/pisen.mp3" type="audio/mpeg"></audio></body>',
+        )
 
     # Create the directory if it doesn't exist
     if not os.path.exists(id):
