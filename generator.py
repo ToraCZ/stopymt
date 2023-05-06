@@ -10,7 +10,7 @@ with open("./template.html", "r", encoding="utf-8") as template_file:
 # font for QR
 font = ImageFont.truetype("arial.ttf", 18)
 index = 0
-roman_numerals = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII"]
+roman_numerals = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII"]
 
 for line in data:
     [id, place, item, map, text] = [x.strip() for x in line.split("|")]
